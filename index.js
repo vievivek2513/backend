@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("sdfsdfsdfsdf");
+  res.send("Nice qoeking with you");
 });
 
 app.use("/api/v1/todo", userRouter);
