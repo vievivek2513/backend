@@ -13,10 +13,6 @@ config({
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  console.log("noce wokring hai jo");
-});
-
 app.use(
   cors({
     origin: [process.env.FRONTEND_URL],
