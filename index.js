@@ -7,13 +7,12 @@ import { config } from "dotenv";
 import cors from "cors";
 
 export const app = express();
+app.use(cors());
 config({
   path: "./data/config.env",
 });
 
 app.use(express.json());
-
-app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Nice qoeking with you");

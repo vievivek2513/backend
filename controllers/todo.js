@@ -14,6 +14,7 @@ export const AddTodo = async (req, res) => {
 };
 
 export const GetAllTodo = async (req, res) => {
+  console.log("asdasd");
   const Alltodos = await Message.find({});
 
   res.status(201).json({
