@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.render("./index", { name: "vivek", age: 24 });
+  res.render("sdfsdfsdfsdf");
 });
 
 app.use("/api/v1/todo", userRouter);
