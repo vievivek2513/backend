@@ -20,6 +20,10 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.render("./index", { name: "vivek", age: 24 });
+});
+
 app.use("/api/v1/todo", userRouter);
 
 // app.use(express.static(path.join(path.resolve(), "public")));
