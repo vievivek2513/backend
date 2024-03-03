@@ -11,8 +11,18 @@ config({
   path: "./data/config.env",
 });
 
-app.use(cors());
 app.use(express.json());
+
+app.get("/", (req, res) => {
+  console.log("noce wokring hai jo");
+});
+
+app.use(
+  cors({
+    origin: [process.env.FRONTEND_URL],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
 
 app.use("/api/v1/todo", userRouter);
 
